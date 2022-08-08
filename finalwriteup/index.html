@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+	
+<head>
+
+	<link rel="stylesheet" type="text/css" href="css/appstyle.css">
+	<link href="https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700" rel="stylesheet">
+	<title>diary</title>
+
+</head>
+
+<body>
+
+	<div class="main">
+		<div class="header">
+			<h2>Final write-up</h2>
+		</div>
+
+		<p>> <a href="../finalproject/index.html">link to final project page</a></p> 
+
+		<p>While the whole module from start to finish had been difficult, it was also an enjoyable ride, and I learnt so many things from both the teaching staff and my peers alike in relation to coding. I think that this final project rounds my learning journey for NM2207 perfectly, and sums up all the different pieces of code I have learnt over the past 13 weeks.</p>  
+
+		<p>I started my final project by thinking of what I wanted to do for it. It had always been in my mind to do a game - the first ever game we created in this module, the one that appeared as a code-along in week six - had been such a memorable little thing. As simple as it had been, the fact that such short lines of code could create something that addictive and fun left a lasting impact on me. Eventually, I decided to go for something more arcade-styled, and chose to do a game that is essentially pong. I chose pong as it seemed like I could make best use of what I have learnt over the past couple of weeks on that particular game.</p> 
+
+		<p>After having a very basic idea of what I wanted to make, I decided to, in very week six fashion, plan out two main things. Firstly, a list of all the elements I needed to see in the game, and secondly, a rough list of features and functions that is necessary for the game to operate. This took a little longer than expected, but it was a very vital step, as it provided me with the very blueprint of the game. It was a reliable map that I always fell back upon when I was unsure of what next to do for the game. The plan itself, while already shown in my second diary entry, will be elaborated on in this final write-up.</p> 
+
+		<p>Firstly, the game, like any other game, required a start button. The start button, when clicked, should start the ball going. I accomplished this by first creating a <i>startgame</i> function that made the ball move. I then created a button, and added it with an event listener that called the <i>startgame</i> function through the timer event function, setInterval whenever it is clicked.</p> 
+
+		<p>Next, I had to ensure that the movement of the ball is limited to only the field, with the only exception being when a point is scored. I made use of knowledge in week eight, and reversed the direction of the ball whenever it hit the upper and lower walls. Using the same concept, I made sure the ball also bounced off the paddles of both the player and the PC.</p> 
+
+		<p>Regarding the movement of the paddles, I made the player paddle moveable by making the paddle listen for the mousemove event, updating the paddle’s position to clientY of the mouse event. On the other hand, the PC paddle was originally made to move in a very systematic fashion - with one animate function moving it up along the field, and another function moving it down. This however, felt too lackluster, with the ball hitting on the PC paddle only out of sheer luck. As such, I changed up my approach and decided to make the PC paddle move a little smarter by updating one of the move paddle functions so that it animates and moves towards the cy coordinates of the ball.</p> 
+
+		<p>Finally, there was a need for two kinds of <i>victory</i> functions - one for when one side scores a point, and another function for ending the game. The victory function is simple - it essentially adds a point to the appropriate side when the ball either goes beyond x = 0, or when x = width of the paper. It also updates the scoreboard, and proceeds to throw out the ball again from a random point on the field. The <i>endgame</i> function is also relatively simple - there was a need to reset the point system back to 0 for both sides, clear the timer event, and finally, reset the position of the ball back to the center.</p> 
+
+		<p>At the end of everything however, there were two main things that I failed to solve completely. First and foremost, the occasional glitching of the ball which causes it to slide down the paddle vertically when it strikes its corner. I assumed that this was happening because the ball was striking at a point very close to the y coordinates used in the if condition, but was not actually at the y coordinate itself, causing it to not bounce off the paddle. I tried to fix this glitch by adjusting the conditions of when the ball bounces off the paddle - adding an allowance of about 10px both above and below the paddle. However, it still occasionally occurs, although it happens less frequently. The most frustrating issue however, would be that I did not manage to reset the positions of the ghost balls. While the balls do have their positions reset to the center once the game ends, when the player clicks the start button again, the ghost balls continue moving from their previous positions when the timer event was cleared. I understand that this happens because my first while loop (line 251) is not being run again, most likely because the counter has not been reinitialised to 0, but I did not manage to find out where to put the line of counter = 0.</p>   
+
+		<p>This entire final project had essentially been a mix of consistent effort, trial and error, and taking apart what we learnt in class and reapplying them to suit what you are trying to code. It was an interesting project regardless, and tied up my learning of HTML, CSS and JavaScript well.</p> 
+
+		<div class="next">
+			<p>
+				<a href="../index.html">back home</a> / <a href="../diary4/index.html">previous entry</a>
+			</p>
+		</div>
+
+	</div>
+
+
+</body>
+
+
+
+
+</html>
