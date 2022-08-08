@@ -1,0 +1,33 @@
+/* styling page for my diary entries */
+
+body {
+	margin: 0px;
+	background-color: Bisque;
+	overflow: auto;
+}
+
+p {
+	font-family: 'Cabin', Sans-Serif;
+	font-size: 16px;
+}
+
+.header{
+	font-family: 'Roboto Condensed', Sans-Serif;
+}
+
+.main {
+	background-color: White;
+	height: 500px;
+	width: 45%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 10px;
+	overflow: auto;
+}
+
+.next {
+}
+
+
