@@ -1,0 +1,49 @@
+html{
+	height:100%;
+	width:100%;
+}
+body {
+	height:100%;
+	width:100%;
+}
+
+h3 {
+	text-align: center;
+}
+
+/* DIFFERENT IDS, PRECEDED BY A # */
+/* set body id first in your respective html documents.*/
+#page1 {
+	background-color: LightSteelBlue;
+}
+
+#page2 {
+	background-color: LightGrey;
+}
+
+#page3 {
+	background-color: #e19d9d;
+}
+
+/* CLASSES, PRECEDED BY A . */
+.storytext {
+	color: #343a42;
+} 
+
+.thoughtstext {
+	color: WhiteSmoke;
+}
+
+.divthoughts {
+	background-color: rgba(0,0,0,.3); 
+	width: 25%;
+	margin: 0 auto;
+	border-left: 5px solid;
+	border-left-color: rgba(0,0,0,.6); 
+	padding: 10px;
+}
+
+.img {
+	text-align: center;
+}
+
