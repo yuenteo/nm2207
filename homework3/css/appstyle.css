@@ -1,0 +1,81 @@
+html, body {
+  height:100%;
+  width:100%;
+  background-color: #111;
+
+}
+
+/* Sections of Layout
+-------------------------------------- */
+/* Generic styles for demo purposes
+-------------------------------------- */
+.container {
+  font-family: Helvetica, Arial, sans-serif;
+  height:98%;
+  width:98%;
+}
+
+.container > * {
+  background-color: #ccc;
+  padding: 1em;
+  border-radius: 15px;
+  background-image: url(https://66.media.tumblr.com/c95706edcd409f8184e1bbaa6a8c53cd/tumblr_inline_mkjkxxc6u01qz4rgp.jpg);
+}
+
+/* Typically, you wouldn't specify a height or min-height on this, instead allowing your actual content (i.e., text, images, etc.) to dictate the height of your content area. But since this example has very minimal content, I've set a min-height to mimic a taller content area. */
+.content {
+  min-height: 40%;
+  overflow-y: scroll;
+}
+
+.paragraph {
+  font-size: 10pt;
+}
+
+/* Layout is stacked vertically by default (for narrower viewports), so give some breathing room between the sections. */
+/* Select all elements where parent is a container */
+.container > * {
+  margin-bottom: 2%;
+}
+
+.sidebar {
+  text-align: center;
+}
+
+.sidebar.aside {
+  background-image: url(https://66.media.tumblr.com/45d520ec1ff8cbe205b6f6e8c3eb6b1d/tumblr_inline_mkjleg9ryB1qz4rgp.png);
+  background-size: contain;
+}
+
+.footer {
+  background-image: linear-gradient(to right, orange, yellow, green);
+  }
+
+/* Now let's apply grid for wider viewports.
+-------------------------------------- */
+@media screen and (min-width: 40em) {
+  .container > * {
+    margin-bottom: 0;
+  }
+  /* Define the grid */
+  .container {
+    display: grid;
+    grid-template-columns: 18% 60% 18%;
+    grid-gap: 2% 2%;
+    grid-template-rows: 10% auto 10%;
+  }
+  /* Place items on the grid */
+  .header {
+    grid-column: 1 / span 3;
+
+  }
+  .sidebar {
+    grid-row-end: span 2;
+  }
+  .content {
+    grid-column: 2;
+  }
+
+}
+
+
