@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+	
+<head>
+
+	<link rel="stylesheet" type="text/css" href="css/appstyle.css">
+	<link href="https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700" rel="stylesheet">
+	<title>diary</title>
+
+</head>
+
+<body>
+
+	<div class="main">
+		<div class="header">
+			<h2>Diary entry four</h2>
+		</div>
+
+		<p>> <a href="../finalproject/index.html">link to final project page</a></p> 
+
+		<p>
+			For week 12, I spent time on three main aspects of the game. 
+		</p>
+
+
+		<ol>
+			<li>Making the ball bounce off the paddles. I did this by making it so that when the x position of the ball is let's say, more than the x position of the pc paddle, and when the y position of the ball is within the height of the paddle (the two y positions - top and bottom) of paddle, the ball would move in the opposite direction (making its rate a negative value).</li><br>
+
+			<li>When either side scores a point. Of course, when either side scores a point, a point is awarded to the winning side - the scoreboard at the bottom of the grid layout updates this accordingly. The awarding of a point is determined through the ball's position. If the x position of the ball is more than the width of the paper, one point goes to the player. This applies vice versa. Additionally, once one side scores a point, there is a need for a "soft reset" of the game by having the ball fly out again at a random direction (this is given that the winning score is not yet achieved by either side).</li><br>
+
+			<li>Creating the function for winning the game/end game. A variable indicating the winning point was created. When said winning point is reached by either side, the game would end. An alert box should pop up, indicating the winner. The end game function should also reset the score and bring the ball back to the center after its motion is stopped so as to allow a new game to start when the start button is once again clicked.</li>
+		</ol>
+
+		<p>
+				With these new additions, I'll have finished 90% or so of my game. All that's left now is to fix several portions of the code. Three main things have to be looked into and (maybe) fixed: (1) Making the PC AI smarter. Right now, it's kind of just going up and down systematically. Maybe I can make it better by letting it chase the coordinates of the ball's center? I don't know how to achieve that, but I'll play around and see what I get. (2) The x and y rates of the ball as of right now are controlled with random(a, b). With a and b being the minimum and maximum numbers. However, having this means that every single time the game either soft resets or ends and starts again, the speed of the ball would be different. I implemented the random number generator because I wanted the directions of the ball to be varied each time the game starts. However, I forgot that speed would also be affected? Maybe there's a workaround for this, I'm not sure. (3) Finally, there are moments when the ball glitches and slides along and down the paddle instead of rebouncing off them. I don't know why this happens but I think it might be because the very tips and sides of the paddle aren't part of the condition which made the ball bounce off.
+		</p>
+
+		<p>
+			All that's left is fixing the mess above, add difficulty options for the game, and also change up the grid layout!
+		</p>	
+
+	
+		<div class="next">
+			<p>
+				<a href="../index.html">back home</a> / <a href="../diary3/index.html">previous entry</a> / <a href="../finalwriteup/index.html">next entry</a>
+			</p>
+		</div>
+
+	</div>
+
+
+</body>
+
+
+
+
+</html>
